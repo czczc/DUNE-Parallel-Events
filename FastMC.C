@@ -11,6 +11,7 @@ FastMC::FastMC(TTree *tree) : fChain(0)
       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("fastmcNtp_20140711_lbne_g4lbnev3r2p4_nuflux_numuflux_nue_LAr_1_g280_Ar40_5000_Default.root");
       if (!f || !f->IsOpen()) {
          f = new TFile("data/fastmcNtp_20140711_lbne_g4lbnev3r2p4_nuflux_numuflux_nue_LAr_1_g280_Ar40_5000_Default.root");
+         // f = new TFile("data/fastmcNtp_20140711_lbne_g4lbnev3r2p4_nuflux_numuflux_numu_LAr_1_g280_Ar40_5000_Default.root");
       }
       f->GetObject("gst",tree);
 
